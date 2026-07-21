@@ -33,14 +33,15 @@
         </button>
         <div class="navbar-collapse custom-collapse" id="primaryMenu" data-nav-menu>
           <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#prices">قیمت‌ها</a></li>
-            <li class="nav-item"><a class="nav-link" href="#calculator">خرید و فروش</a></li>
-            <li class="nav-item"><a class="nav-link" href="#features">مزایا</a></li>
-            <li class="nav-item"><a class="nav-link" href="#faq">سوالات</a></li>
+            <li class="nav-item"><a class="nav-link" href="#calculator">خرید TRX</a></li>
+            <li class="nav-item"><a class="nav-link" href="#calculator">فروش TRX</a></li>
+            <li class="nav-item"><a class="nav-link" href="#currencies">خرید USDT</a></li>
+            <li class="nav-item"><a class="nav-link" href="#steps">راهنما</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">وبلاگ</a></li>
           </ul>
           <div class="header-actions">
             <a class="btn btn-soft" href="#">ورود</a>
-            <a class="btn btn-primary-red" href="#calculator">ثبت‌نام</a>
+            <a class="btn btn-primary-red" href="#calculator">ثبت نام</a>
           </div>
         </div>
       </div>
@@ -53,12 +54,12 @@
         <div class="row align-items-center g-4 g-lg-5">
           <div class="col-lg-6">
             <div class="hero__content reveal">
-              <span class="eyebrow"><i class="bi bi-shield-check"></i> مسیر سریع تبدیل TRX به ریال</span>
+              <span class="eyebrow"><i class="bi bi-shield-check"></i> صرافی تخصصی ترون</span>
               <h1>خرید و فروش ترون با تسویه سریع ریالی</h1>
-              <p class="hero__lead">Aval Money برای معامله‌گران تازه‌کار و حرفه‌ای ساخته شده است؛ تمرکز اصلی روی TRX و USDT شبکه BSC با فرآیندی امن، شفاف و پشتیبانی پاسخ‌گو.</p>
+              <p class="hero__lead">خرید TRX و USDT BSC با تسویه سریع و پشتیبانی حرفه‌ای؛ مناسب کاربرانی که می‌خواهند دارایی دیجیتال خود را بدون پیچیدگی به ریال تبدیل کنند.</p>
               <div class="hero__actions">
-                <a class="btn btn-primary-red btn-lg" href="#calculator">همین حالا خرید و فروش کنید</a>
-                <a class="btn btn-outline-blue btn-lg" href="#prices">مشاهده نرخ‌ها</a>
+                <a class="btn btn-primary-red btn-lg" href="#calculator">خرید سریع TRX</a>
+                <a class="btn btn-outline-blue btn-lg" href="#calculator">فروش TRX و دریافت ریال</a>
               </div>
               <div class="trust-row" aria-label="مزیت‌های کلیدی">
                 <span><i class="bi bi-lightning-charge"></i> تسویه ریالی سریع</span>
@@ -109,24 +110,25 @@
 
     <section class="section-pad" id="calculator">
       <div class="container app-container">
-        <div class="exchange-card reveal">
+        <div class="exchange-card reveal" data-converter>
           <div class="section-heading">
-            <span class="eyebrow">محاسبه سریع</span>
-            <h2>کارت خرید و فروش Aval Money</h2>
-            <p>این بخش فقط رابط کاربری است و محاسبه واقعی در مرحله بعد متصل می‌شود.</p>
+            <span class="eyebrow"><i class="bi bi-calculator"></i> تبدیل سریع TRX</span>
+            <h2>خرید و فروش ترون</h2>
+            <p>محاسبه نمایشی با نرخ ثابت تستی؛ قیمت نهایی هنگام ثبت درخواست و بررسی پشتیبانی مشخص می‌شود.</p>
           </div>
           <div class="trade-tabs" role="tablist" aria-label="نوع معامله">
-            <button class="active" type="button" role="tab" aria-selected="true"><i class="bi bi-bag-check"></i> خرید TRX</button>
-            <button type="button" role="tab" aria-selected="false"><i class="bi bi-cash-coin"></i> فروش TRX</button>
+            <button class="active" type="button" role="tab" aria-selected="true" data-trade-tab data-mode="buy"><i class="bi bi-bag-check"></i> خرید</button>
+            <button type="button" role="tab" aria-selected="false" data-trade-tab data-mode="sell"><i class="bi bi-cash-coin"></i> فروش</button>
           </div>
           <form class="calculator-form">
-            <label for="amount">مبلغ به تومان</label>
-            <div class="field-group"><input id="amount" type="text" inputmode="numeric" placeholder="مثال: ۱۰,۰۰۰,۰۰۰"><span>تومان</span></div>
-            <div class="swap-icon" aria-hidden="true">↓</div>
-            <label for="currency">دریافت ارز</label>
-            <div class="field-group field-group--highlight"><select id="currency"><option>TRX - ترون</option><option>USDT BSC - تتر</option></select><span>اولویت</span></div>
-            <div class="estimate"><span>مقدار تقریبی دریافتی</span><strong>۴,۰۴۸.۵۸ TRX</strong></div>
-            <button class="btn btn-primary-red w-100 btn-lg" type="button">همین حالا خرید یا فروش TRX را ثبت کنید</button>
+            <label for="amount" data-input-label>پرداخت به تومان</label>
+            <div class="field-group"><input id="amount" type="text" inputmode="numeric" value="۱,۰۰۰,۰۰۰" placeholder="مثال: ۱,۰۰۰,۰۰۰" data-converter-input><span data-input-unit>تومان</span></div>
+            <div class="swap-icon" aria-hidden="true"><i class="bi bi-arrow-down-up"></i></div>
+            <label for="currency" data-output-label>دریافت TRX</label>
+            <div class="field-group field-group--highlight"><select id="currency" data-currency-select><option value="TRX">TRX - ترون</option><option value="USDT_BSC">USDT BSC - تتر</option></select><span data-output-unit>TRX</span></div>
+            <div class="estimate"><span data-result-label>مقدار تقریبی دریافتی</span><strong data-converter-result>۴۵٬۰۰۰ TRX</strong></div>
+            <p class="rate-note"><i class="bi bi-info-circle"></i> نرخ نمایشی تست: هر TRX حدود ۲۲٫۲۲ تومان</p>
+            <button class="btn btn-primary-red w-100 btn-lg" type="button" data-converter-cta>خرید سریع TRX</button>
           </form>
         </div>
       </div>

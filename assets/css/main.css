@@ -527,3 +527,51 @@ body {
   .section-pad { padding: 74px 0; }
   .hero.section-pad { padding-top: 66px; }
 }
+
+/* Requested conversion-focused refinements */
+.navbar-nav { gap: .15rem; }
+.nav-link { white-space: nowrap; }
+.hero__actions .btn-outline-blue { background: rgba(255,255,255,.78); }
+
+.exchange-card[data-converter] .section-heading { margin-bottom: 1.35rem; }
+.exchange-card[data-converter] .trade-tabs button.active {
+  background: linear-gradient(135deg, var(--red), #9f0d18);
+  box-shadow: 0 12px 24px rgba(201, 20, 35, .18);
+}
+.exchange-card[data-converter] .calculator-form { position: relative; }
+.rate-note {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  color: var(--muted);
+  font-size: .86rem;
+  margin: -.25rem 0 1rem;
+}
+.rate-note i { color: var(--blue-2); }
+.estimate strong { direction: ltr; unicode-bidi: isolate; }
+.swap-icon i { line-height: 1; }
+
+.currency-card.available {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.currency-card.available .coin-badge { width: 48px; height: 48px; flex-basis: 48px; }
+.currency-card.available:first-child .coin-badge {
+  width: 58px;
+  height: 58px;
+  flex-basis: 58px;
+  box-shadow: 0 16px 30px rgba(201, 20, 35, .2);
+}
+.soon-grid .currency-card { min-height: 132px; }
+
+@media (max-width: 575.98px) {
+  .custom-collapse { top: 66px; }
+  .navbar { min-height: 66px; }
+  .header-actions .btn { width: 100%; }
+  .exchange-card[data-converter] { padding: 1rem; }
+  .trade-tabs button { font-size: .95rem; }
+  .estimate { display: grid; gap: .2rem; }
+  .estimate strong { font-size: 1.15rem; }
+}
