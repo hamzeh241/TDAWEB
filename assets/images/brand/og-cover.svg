@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Aval Money">
+  <rect width="1200" height="630" fill="#061a44"/>
+  <circle cx="230" cy="230" r="130" fill="#d61f2c" opacity=".85"/>
+  <circle cx="360" cy="345" r="95" fill="#18ad7a" opacity=".9"/>
+  <text x="760" y="285" direction="rtl" text-anchor="middle" font-family="Tahoma,Arial" font-size="76" font-weight="700" fill="#fff">اول مانی</text>
+  <text x="760" y="370" direction="rtl" text-anchor="middle" font-family="Tahoma,Arial" font-size="34" fill="#cbd6ef">خرید و فروش امن USDT و TRX</text>
+</svg>
